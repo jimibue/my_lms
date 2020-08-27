@@ -5,6 +5,7 @@
 <ul>
   <% @teachers.each do |teacher_enrollment|%>
     <li><%= teacher_enrollment.user.full_name %></li>
+    <%= link_to 'Remove', course_enrollment_path(@course, teacher_enrollment), method: :delete %>
   <% end %>
 </ul>
 <h2>Ta</h2>
